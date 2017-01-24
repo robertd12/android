@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Business App</string>
+    <string name="visit">Visit the Zalew Zemborzycki</string>
+    <string name="description">Zalew Zemborzycki is an artificial lake located in the southern park of Lublin, Poland. It is called after the district name - Zemborzyce.
+        Around the lake there are 14 km of walking paths and cycling paths. There is also water skii resort and kayaking center.</string>
+    <string name="location">To reach Zalew Zemborzycki you can use Lublin Airport, located only 30minutes away as shown on map below. </string>
+    <string name="koloprzycisku">check flights </string>
+    <string name="galeria">Gallery</string>
+</resources>
