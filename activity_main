@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.robert.businessapp.MainActivity"
+    android:background="@drawable/wood3">
+
+<--------------Top Image------------>
+        <ImageView
+        android:id="@+id/zdjecie"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:src="@drawable/img_kopia"
+        android:scaleType="centerCrop"/>
+
+        <TextView
+        android:id="@+id/visit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/visit"
+        android:background="#82131313"
+        style="@style/naglowki"
+            android:layout_alignBottom="@id/zdjecie" />
+
+<-----------------Scrolling starts---------------------->
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/zdjecie">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relativel1"
+                style="@style/tlo"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+                
+<-------------------------------Info bar------------------->
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Info"
+                    style="@style/galeria"/>
+
+                <TextView
+                    android:id="@+id/description"
+                    android:text="@string/description"
+                    style="@style/description"
+                    android:layout_below="@id/info"/>
+            </RelativeLayout>
+<---------------------Gallery -------------->
+        <RelativeLayout
+            android:id="@+id/relativel2"
+            style="@style/tlo"
+            android:orientation="vertical"
+            android:layout_below="@id/relativel1">
+
+                <TextView
+                    android:id="@+id/galeria"
+                    android:text="@string/galeria"
+                    style="@style/galeria" />
+
+                <HorizontalScrollView
+                    android:id="@+id/hscrollview"
+                    android:scrollbarAlwaysDrawHorizontalTrack="true"
+                    android:layout_below="@id/galeria"
+                    style="@style/hgaleria">
+
+                    <LinearLayout
+                        android:id="@+id/linearl"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/zdj1"
+                            android:adjustViewBounds="true"
+                            android:layout_margin="4dp" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:src="@drawable/zdj2"
+                            android:adjustViewBounds="true"/>
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:src="@drawable/zdj3"
+                            android:id="@+id/imageView"
+                            android:adjustViewBounds="true"/>
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:src="@drawable/zdj1"
+                            android:adjustViewBounds="true"/>
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:src="@drawable/zdj2"
+                            android:adjustViewBounds="true"/>
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:src="@drawable/zdj3"
+                            android:adjustViewBounds="true"/>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+        </RelativeLayout>
+        
+<------------------------Localization-------------------------------->
+
+        <RelativeLayout
+            android:id="@+id/relativel3"
+            style="@style/tlo"
+            android:orientation="vertical"
+            android:layout_below="@id/relativel2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/localization"
+                android:text="Localization"
+                style="@style/galeria"/>
+
+            <TextView
+                android:id="@+id/lokalizacja"
+                android:text="@string/location"
+                style="@style/description"
+                android:layout_below="@id/localization" />
+                
+<---------------------map----------------------------------->
+
+            <ImageView
+                android:id="@+id/mapa"
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/lotnisko"
+                android:layout_below="@id/lokalizacja"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+<------------------------------Button------------------------------>
+            <Button
+                android:text="Here"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relativel3"
+                android:layout_marginRight="40dp"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/button"
+                android:background="@android:color/background_dark"
+                android:textColor="@android:color/white"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/button"
+                android:layout_below="@id/relativel3"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginRight="16dp"
+                style="@style/koloprzycisku"
+                android:text="@string/koloprzycisku" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
+
+
